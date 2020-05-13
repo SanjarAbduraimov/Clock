@@ -1,0 +1,39 @@
+*,*::before,*::after{
+   margin: 0;
+   padding: 0;
+   border: 0;
+   box-sizing: border-box;
+}
+:root {
+   --width:1000px;
+}
+#clock {
+   width: var(--width);
+   height: var(--width);
+   background: url(clock/clock.svg);
+   background-size: cover;
+   position: relative;
+}
+.clockBx {
+   width: var(--width);
+   height: var(--width);
+   background: transparent;
+   position: absolute;
+   bottom: 0;
+   left: 0;
+   transform-origin: center;
+}
+.strela {
+   margin: 0 auto;
+   height: 100%;
+   width: calc(var(--width)/25);
+}
+.second .strela{
+   background: linear-gradient(0deg,transparent,transparent,transparent,yellow,red,red,yellow,transparent);
+}
+.minute .strela{
+   background: linear-gradient(0deg,transparent,transparent,transparent,transparent,red,red,red,transparent);
+}
+.hour .strela{
+   background: linear-gradient(0deg,transparent,transparent,transparent,black,red,red,black,transparent);
+}
